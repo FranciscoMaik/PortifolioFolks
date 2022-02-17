@@ -8,10 +8,34 @@ import { Container } from './styles';
 export const Footer: React.FC = function () {
   return (
     <Container>
-      <AiFillInstagram size={40} color="#E2BF2B" className="icon" />
-      <FaWhatsappSquare size={38} color="#E2BF2B" className="icon" />
-      <IoLogoLinkedin size={40} color="#E2BF2B" className="icon" />
-      <IoMdMail size={40} color="#E2BF2B" className="icon" />
+      <a
+        href="https://www.instagram.com/francisco_maik_/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <AiFillInstagram size={40} color="#E2BF2B" className="icon" />
+      </a>
+      <a
+        href="https://api.whatsapp.com/send?phone=5589988020693&text=Ol%C3%A1%2C%20sou%20o%20Francisco%20Maik%2C%20em%20que%20posso%20ajudar%3F"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <FaWhatsappSquare size={38} color="#E2BF2B" className="icon" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/francisco-maik-fonseca-nunes-468511184/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <IoLogoLinkedin size={40} color="#E2BF2B" className="icon" />
+      </a>
+      <a
+        href="mailto:chiconunes3081@gmail.com"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <IoMdMail size={40} color="#E2BF2B" className="icon" />
+      </a>
     </Container>
   );
 };
