@@ -16,12 +16,19 @@ const Home: React.FC = function () {
         <div className="projects">
           <Title name="Projetos" />
           <div className="cards">
-            <CardProject />
-            <CardProject />
-            <CardProject />
-            <CardProject />
-            <CardProject />
-            <CardProject />
+            <CardProject
+              header="Site Tiago Bomfim"
+              description="Criação de um site pessoal do Professor Tiago Bomfim."
+              image="sitetiago.png"
+              linkProject="https://www.tiagobomfim.com.br/"
+            />
+
+            <CardProject
+              header="Person Life"
+              description="Aplicativo para criação e comparação de listas de compras."
+              image="personlife.png"
+              linkProject="https://harvest-crane-e27.notion.site/PersonLife-433750f045804f54b0a2f9d413b1744f"
+            />
           </div>
         </div>
       </div>
