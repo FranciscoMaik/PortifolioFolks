@@ -26,4 +26,8 @@ export const Container = styled.div`
       margin-bottom: 8px;
     }
   }
+
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
+  }
 `;

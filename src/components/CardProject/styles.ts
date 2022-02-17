@@ -47,6 +47,10 @@ export const Container = styled.div`
     text-overflow: ellipsis;
     direction: ltr;
   }
+
+  @media screen and (max-width: 650px) {
+    max-width: 100%;
+  }
 `;
 
 export const HeaderItem = styled.div`

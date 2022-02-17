@@ -12,7 +12,7 @@ export const ContainerHeader: React.FC = function () {
           Sou desenvolvedor Front-end, tenho conhecimento nas liguagens
           Javascript e Python. Desenvolvo utilizando ReactJs e NextJs para Web e
           React Native para mobile. Sou graduando em Sistemas de Informação pela
-          UFPI no qual fui representante do CASI e Empresa Júnior Juá. Foi
+          UFPI no qual fui representante do CASI e Empresa Júnior Juá. Fui
           estagiário na Multiveículos.com lideredando o desenvolvimento do seu
           sistema de catálogo Web e Mobile. Atualmente trabalho na EWZ Capital
           como desenvolvedor Front-end.
