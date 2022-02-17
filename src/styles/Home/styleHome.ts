@@ -17,4 +17,8 @@ export const Container = styled.div`
       margin-block: 24px;
     }
   }
+
+  @media screen and (max-width: 650px) {
+    padding: 24px;
+  }
 `;
