@@ -3,23 +3,36 @@ import { BsArrowRightShort } from 'react-icons/bs';
 
 import { Container, HeaderItem } from './styles';
 
-export const CardProject: React.FC = function () {
+interface CardProjectProps {
+  header: string;
+  description: string;
+  image: string;
+  linkProject: string;
+}
+
+export const CardProject: React.FC<CardProjectProps> = function ({
+  description,
+  header,
+  image,
+  linkProject,
+}) {
   return (
     <Container>
       <div>
         <div className="summary">
           <HeaderItem>
-            <h3>Nome do Projecto</h3>
+            <h3>{header}</h3>
           </HeaderItem>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam,
-            ipsam suscipit. Deserunt id veritatis cupiditate doloremque!
-          </p>
+          <div className="text">
+            <p>{description}</p>
+          </div>
         </div>
-        <img src="cel.png" alt="celular" />
+        <img src={image} alt="celular" />
       </div>
       <div className="icon">
-        <BsArrowRightShort size={18} color="#8A2BE2" />
+        <a href={linkProject} target="_blank" rel="noreferrer">
+          <BsArrowRightShort size={18} color="#8A2BE2" />
+        </a>
       </div>
     </Container>
   );

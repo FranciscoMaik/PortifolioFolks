@@ -38,6 +38,15 @@ export const Container = styled.div`
     align-items: flex-end;
     justify-content: flex-end;
   }
+
+  .text {
+    max-height: 85px;
+    display: inline-block;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    direction: ltr;
+  }
 `;
 
 export const HeaderItem = styled.div`
