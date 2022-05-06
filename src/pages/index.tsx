@@ -1,6 +1,12 @@
 import React from 'react';
 
-import { Title, ContainerHeader, CardProject, Footer } from '../components';
+import {
+  Title,
+  ContainerHeader,
+  CardProject,
+  Footer,
+  Header,
+} from '../components';
 
 import { Container } from '../styles/Home/styleHome';
 
@@ -8,6 +14,12 @@ const Home: React.FC = function () {
   return (
     <Container>
       <div>
+        <div className="portfolio">
+          <Header />
+        </div>
+
+        <h2 className="description">Desenvolvedor web e mobile</h2>
+
         <div className="portfolio">
           <Title name="Portfólio" />
           <ContainerHeader />
