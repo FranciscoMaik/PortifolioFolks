@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background-color: #ebf1f4;
+  background-color: #fefefe;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -16,6 +16,13 @@ export const Container = styled.div`
       gap: 24px;
       margin-block: 24px;
     }
+  }
+
+  .description {
+    font-weight: 100;
+    font-size: 36px;
+    margin-bottom: 24px;
+    color: #13224a;
   }
 
   @media screen and (max-width: 650px) {
