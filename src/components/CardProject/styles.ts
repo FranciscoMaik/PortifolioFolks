@@ -3,12 +3,11 @@ import styled from 'styled-components';
 export const Container = styled.div`
   max-width: 350px;
   max-height: 180px;
-  background-color: #ffffff;
-  border-radius: 8px;
+  background-color: #e2e5ed;
+  border-radius: 4px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 10px 13px -14px #000000;
 
   > div {
     display: flex;
@@ -22,7 +21,6 @@ export const Container = styled.div`
   .summary {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   p {
@@ -54,9 +52,6 @@ export const Container = styled.div`
 `;
 
 export const HeaderItem = styled.div`
-  color: #ffffff;
-  background-color: #8a2be2;
-  border-radius: 4px;
-  padding: 4px 8px;
+  color: #575c82;
   margin-bottom: 8px;
 `;

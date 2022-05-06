@@ -7,5 +7,6 @@ export const Container = styled.div`
   h2 {
     line-height: 150%;
     font-size: 36px;
+    color: #13224a;
   }
 `;

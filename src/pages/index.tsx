@@ -6,6 +6,7 @@ import {
   CardProject,
   Footer,
   Header,
+  Timeline,
 } from '../components';
 
 import { Container } from '../styles/Home/styleHome';
@@ -21,7 +22,7 @@ const Home: React.FC = function () {
         <h2 className="description">Desenvolvedor web e mobile</h2>
 
         <div className="portfolio">
-          <Title name="Portfólio" />
+          <Title name="Sobre" />
           <ContainerHeader />
         </div>
 
@@ -42,6 +43,10 @@ const Home: React.FC = function () {
               linkProject="https://harvest-crane-e27.notion.site/PersonLife-433750f045804f54b0a2f9d413b1744f"
             />
           </div>
+        </div>
+        <div>
+          <Title name="Experiência" />
+          <Timeline />
         </div>
       </div>
 
