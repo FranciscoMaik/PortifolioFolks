@@ -91,24 +91,26 @@ const Home: React.FC = function () {
           </div>
         </div>
 
-        <div>
-          <Title name="Estatísticas" />
-          <div className="statistic">
-            <CardStatistic
-              numberInfo={dataRepos.lengthRepos.toString()}
-              header="Repositórios"
-              description="Desenvolvimento de alguns projetos pessoais, testes de ferramentas e clones de interfaces."
-            />
+        {dataRepos && (
+          <div>
+            <Title name="Estatísticas" />
+            <div className="statistic">
+              <CardStatistic
+                numberInfo={dataRepos.lengthRepos?.toString()}
+                header="Repositórios"
+                description="Desenvolvimento de alguns projetos pessoais, testes de ferramentas e clones de interfaces."
+              />
 
-            <CardStatistic
-              numberInfo={dataRepos.languages.length.toString()}
-              header="Linguagens"
-              description={`Linguagens utilizadas em projetos como: ${dataRepos.languages
-                .map(item => item)
-                .join(', ')}`}
-            />
+              <CardStatistic
+                numberInfo={dataRepos.languages?.length.toString()}
+                header="Linguagens"
+                description={`Linguagens utilizadas em projetos como: ${dataRepos.languages
+                  ?.map(item => item)
+                  .join(', ')}`}
+              />
+            </div>
           </div>
-        </div>
+        )}
 
         <div>
           <Title name="Experiência" />

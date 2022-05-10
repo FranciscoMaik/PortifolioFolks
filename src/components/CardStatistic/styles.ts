@@ -23,18 +23,12 @@ export const Container = styled.div`
       font-size: 35px;
       font-weight: 300;
       color: #5b6a9a;
-      vertical-align: top;
-      /* margin-right: -24px; */
-      padding: 0px;
     }
 
     h2 {
       font-size: 72px;
       font-weight: 300;
-      display: inline-block;
-      vertical-align: top;
       color: #5b6a9a;
-      letter-spacing: -5px;
     }
   }
 
