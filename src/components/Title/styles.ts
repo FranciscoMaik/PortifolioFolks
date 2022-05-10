@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  border-bottom: 1px solid #4a1e9e;
+  border-bottom: 1px solid #13224a;
 
   h2 {
     line-height: 150%;
