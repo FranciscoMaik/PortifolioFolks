@@ -25,6 +25,21 @@ export const Container = styled.div`
     color: #13224a;
   }
 
+  .information {
+    display: flex;
+    gap: 12px;
+
+    > div {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+
+      h3 {
+        color: #13224a;
+      }
+    }
+  }
+
   @media screen and (max-width: 650px) {
     padding: 24px;
   }
