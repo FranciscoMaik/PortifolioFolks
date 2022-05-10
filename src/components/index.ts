@@ -4,5 +4,14 @@ import { CardProject } from './CardProject';
 import { Footer } from './Footer';
 import { Header } from './Header';
 import { Timeline } from './Timeline';
+import { CardInformation } from './CardInformation';
 
-export { Title, ContainerHeader, CardProject, Footer, Header, Timeline };
+export {
+  Title,
+  ContainerHeader,
+  CardProject,
+  Footer,
+  Header,
+  Timeline,
+  CardInformation,
+};
