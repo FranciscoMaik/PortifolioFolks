@@ -91,7 +91,7 @@ const Home: React.FC = function () {
           </div>
         </div>
 
-        {/* <div>
+        <div>
           <Title name="Estatísticas" />
           <div className="statistic">
             <CardStatistic
@@ -108,7 +108,7 @@ const Home: React.FC = function () {
                 .join(', ')}`}
             />
           </div>
-        </div> */}
+        </div>
 
         <div>
           <Title name="Experiência" />

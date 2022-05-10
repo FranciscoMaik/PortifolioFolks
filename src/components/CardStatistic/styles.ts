@@ -24,7 +24,7 @@ export const Container = styled.div`
       font-weight: 300;
       color: #5b6a9a;
       vertical-align: top;
-      margin-right: -24px;
+      /* margin-right: -24px; */
       padding: 0px;
     }
 
