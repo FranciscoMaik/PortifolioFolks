@@ -46,7 +46,7 @@ export const Timeline: React.FC = function () {
       <Chrono
         items={items}
         mode="HORIZONTAL"
-        cardWidth={400}
+        // cardWidth={400}
         hideControls
         lineWidth={1}
         timelineCircleDimension={8}
