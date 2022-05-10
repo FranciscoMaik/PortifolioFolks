@@ -18,6 +18,13 @@ export const Container = styled.div`
     }
   }
 
+  .statistic {
+    display: flex;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    gap: 24px;
+  }
+
   .description {
     font-weight: 100;
     font-size: 36px;

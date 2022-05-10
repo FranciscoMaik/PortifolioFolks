@@ -5,6 +5,7 @@ import { Footer } from './Footer';
 import { Header } from './Header';
 import { Timeline } from './Timeline';
 import { CardInformation } from './CardInformation';
+import { CardStatistic } from './CardStatistic';
 
 export {
   Title,
@@ -14,4 +15,5 @@ export {
   Header,
   Timeline,
   CardInformation,
+  CardStatistic,
 };
