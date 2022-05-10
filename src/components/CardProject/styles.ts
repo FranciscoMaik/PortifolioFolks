@@ -9,13 +9,16 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
+  :hover {
+    transform: scale(1.02);
+    transition: 0.5s;
+    background-color: #fff;
+    box-shadow: 0px 5px 50px -8px #ddd;
+  }
+
   > div {
     display: flex;
     gap: 24px;
-  }
-
-  img {
-    height: 110px;
   }
 
   .summary {
@@ -24,7 +27,7 @@ export const Container = styled.div`
   }
 
   p {
-    color: #808080;
+    color: #81899c;
     text-overflow: ellipsis;
   }
 
@@ -33,8 +36,16 @@ export const Container = styled.div`
     margin-top: 8px;
     width: 100%;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+
+    > a {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+
+      > p {
+        color: #4a90e2;
+      }
+    }
   }
 
   .text {
@@ -52,6 +63,6 @@ export const Container = styled.div`
 `;
 
 export const HeaderItem = styled.div`
-  color: #575c82;
+  color: #5b6a9a;
   margin-bottom: 8px;
 `;
