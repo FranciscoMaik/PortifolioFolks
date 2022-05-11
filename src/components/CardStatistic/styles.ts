@@ -11,8 +11,8 @@ export const Container = styled.div`
   :hover {
     transform: scale(1.02);
     transition: 0.5s;
-    background-color: #fff;
-    box-shadow: 0px 5px 50px -8px #ddd;
+    background-color: ${({ theme }) => theme.hover};
+    box-shadow: 0px 5px 50px -8px ${({ theme }) => theme.boxShadowHover};
   }
 
   .staticInfo {
