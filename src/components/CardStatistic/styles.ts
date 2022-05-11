@@ -29,6 +29,7 @@ export const Container = styled.div`
       font-size: 72px;
       font-weight: 300;
       color: #5b6a9a;
+      margin-left: -24px;
     }
   }
 
