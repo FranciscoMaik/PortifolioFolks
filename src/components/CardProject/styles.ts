@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   max-width: 350px;
   max-height: 180px;
-  background-color: #e2e5ed;
+  background-color: ${({ theme }) => theme.backgroundCard};
   border-radius: 4px;
   padding: 20px;
   display: flex;
@@ -27,7 +27,7 @@ export const Container = styled.div`
   }
 
   p {
-    color: #81899c;
+    color: ${({ theme }) => theme.thirdColor};
     text-overflow: ellipsis;
   }
 
@@ -43,7 +43,7 @@ export const Container = styled.div`
       font-size: 14px;
 
       > p {
-        color: #4a90e2;
+        color: ${({ theme }) => theme.fourColor};
       }
     }
   }
@@ -63,6 +63,6 @@ export const Container = styled.div`
 `;
 
 export const HeaderItem = styled.div`
-  color: #5b6a9a;
+  color: ${({ theme }) => theme.secondaryColor};
   margin-bottom: 8px;
 `;

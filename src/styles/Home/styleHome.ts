@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background-color: #fefefe;
+  background-color: ${({ theme }) => theme.backgroundPage};
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -29,7 +29,7 @@ export const Container = styled.div`
     font-weight: 100;
     font-size: 36px;
     margin-bottom: 24px;
-    color: #13224a;
+    color: ${({ theme }) => theme.primaryColor};
   }
 
   .information {
@@ -42,7 +42,7 @@ export const Container = styled.div`
       flex-direction: column;
 
       h3 {
-        color: #13224a;
+        color: ${({ theme }) => theme.primaryColor};
       }
     }
   }

@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  background-color: #ffffff;
   border-radius: 8px;
   align-items: center;
   gap: 20px;
@@ -10,7 +9,7 @@ export const Container = styled.div`
   max-width: 1098px;
   margin-block: 12px;
   line-height: 150%;
-  color: #81899c;
+  color: ${({ theme }) => theme.thirdColor};
 
   @media screen and (max-width: 650px) {
     flex-direction: column;

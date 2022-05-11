@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   max-width: 350px;
   max-height: 180px;
-  background-color: #e2e5ed;
+  background-color: ${({ theme }) => theme.backgroundCard};
   border-radius: 4px;
   padding: 20px;
   display: flex;
@@ -22,13 +22,13 @@ export const Container = styled.div`
     span {
       font-size: 35px;
       font-weight: 300;
-      color: #5b6a9a;
+      color: ${({ theme }) => theme.secondaryColor};
     }
 
     h2 {
       font-size: 72px;
       font-weight: 300;
-      color: #5b6a9a;
+      color: ${({ theme }) => theme.secondaryColor};
       margin-left: -24px;
     }
   }
@@ -44,25 +44,8 @@ export const Container = styled.div`
   }
 
   p {
-    color: #81899c;
+    color: ${({ theme }) => theme.thirdColor};
     text-overflow: ellipsis;
-  }
-
-  .icon {
-    cursor: pointer;
-    margin-top: 8px;
-    width: 100%;
-    display: flex;
-
-    > a {
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 14px;
-
-      > p {
-        color: #4a90e2;
-      }
-    }
   }
 
   .text {
@@ -80,6 +63,6 @@ export const Container = styled.div`
 `;
 
 export const HeaderItem = styled.div`
-  color: #5b6a9a;
+  color: ${({ theme }) => theme.secondaryColor};
   margin-bottom: 8px;
 `;

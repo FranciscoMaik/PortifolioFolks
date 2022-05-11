@@ -9,18 +9,18 @@ export const Container = styled.div`
     .years {
       font-weight: bold;
       font-size: 18px;
-      color: #4a90e2;
+      color: ${({ theme }) => theme.fourColor};
     }
 
     h4 {
       font-weight: bold;
       font-size: 18px;
       margin-bottom: 4px;
-      color: #5b6a9a;
+      color: ${({ theme }) => theme.secondaryColor};
     }
 
     p {
-      color: #81899c;
+      color: ${({ theme }) => theme.thirdColor};
     }
   }
 `;

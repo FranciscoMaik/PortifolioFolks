@@ -6,13 +6,13 @@ export const Container = styled.div`
   margin-bottom: 24px;
 
   h1 {
-    color: #13224a;
+    color: ${({ theme }) => theme.primaryColor};
     font-weight: 100;
     font-size: 64px;
   }
 
   h2 {
     font-weight: 100;
-    color: #808080;
+    color: ${({ theme }) => theme.thirdColor};
   }
 `;

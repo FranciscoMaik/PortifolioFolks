@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background-color: #e2e5ed;
+  background-color: ${({ theme }) => theme.backgroundCard};
   width: 100%;
   display: flex;
   justify-content: center;
