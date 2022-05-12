@@ -4,7 +4,9 @@ export const Container = styled.div`
   padding-top: 12px;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   padding-right: 12px;
+  gap: 4px;
   background-color: ${({ theme }) => theme.backgroundPage};
   /* The switch - the box around the slider */
   .switch {
