@@ -1,21 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import type { AppProps } from 'next/app';
-import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '../../globalStyle';
-import { theme, themeDark } from '../styles/Theme/theme';
 import { Toggle } from '../components/button';
+import { ThemeContextProvider } from '../context/ThemeContext';
 
 const MyApp: React.FC<AppProps> = function ({ Component, pageProps }) {
-  const [themeSelected, setThemeSelected] = useState<boolean>(true);
-
-  const handleToggleTheme = () => setThemeSelected(!themeSelected);
-
   return (
-    <ThemeProvider theme={themeSelected ? theme : themeDark}>
-      <Toggle handleToggleTheme={handleToggleTheme} />
+    <ThemeContextProvider>
+      <Toggle />
       <Component {...pageProps} />
       <GlobalStyle />
-    </ThemeProvider>
+    </ThemeContextProvider>
   );
 };
 

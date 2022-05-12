@@ -9,6 +9,7 @@ export const theme = {
   backgroundPage: '#fefefe',
   hover: '#fff',
   boxShadowHover: '#ddd',
+  colorText: '#000',
 };
 
 export const themeDark = {
@@ -20,4 +21,5 @@ export const themeDark = {
   backgroundPage: invert('#fefefe'),
   hover: invert('#fff'),
   boxShadowHover: invert('#ddd'),
+  colorText: '#fff',
 };
