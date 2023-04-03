@@ -72,7 +72,7 @@ const Home: React.FC = function () {
                   years={0}
                   activeYears={false}
                   title="JavaScript e TypesCript"
-                  skills={['Testes', 'Storybook', 'UX e UI']}
+                  skills={['Testes', 'UX e UI', 'Observabilidade']}
                 />
               </div>
             </div>
