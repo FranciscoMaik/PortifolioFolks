@@ -1,5 +1,6 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
+import apm from '../../elastic-apm-node-start.js';
 import { GlobalStyle } from '../../globalStyle';
 import { Toggle } from '../components/button';
 import { ThemeContextProvider } from '../context/ThemeContext';
