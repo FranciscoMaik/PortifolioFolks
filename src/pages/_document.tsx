@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../initapm';
+
 import Document, {
   DocumentContext,
   DocumentInitialProps,
