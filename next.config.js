@@ -5,7 +5,7 @@ module.exports = {
   async rewrites() {
     return [
       {
-        source: "/api/:path*",
+        source: "/hub/:path*",
         destination: "https://www.ewzhub.com/:path*",
         basePath:  false,
         // source: "/hub/:path*",
