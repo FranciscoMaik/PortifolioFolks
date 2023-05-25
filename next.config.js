@@ -2,11 +2,12 @@
 module.exports = {
   reactStrictMode: true,
 
-  async rewrites() {
+  async redirects() {
     return [
       {
         source: "/hub/:path*",
         destination: "https://www.ewzhub.com/:path*",
+        permanent: false
       }
     ]
   }
