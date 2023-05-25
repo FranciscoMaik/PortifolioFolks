@@ -4,6 +4,9 @@
   "devCommand": "next dev",
   "framework": "nextjs",
   "rewrites": [
-    {"source": "/hub/(.*)", "destination": "https://aijy1zk0j8.execute-api.sa-east-1.amazonaws.com/v1/$1"}
+    {
+      "source": "/hub/(.*)",
+      "destination": "https://www.ewzhub.com/v1/$1"
+    }
   ]
 }
