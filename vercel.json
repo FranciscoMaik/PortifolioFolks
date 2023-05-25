@@ -1,6 +1,6 @@
 {
   "buildCommand": "next build",
-  "installCommand": "npm install",
+  "installCommand": "yarn install",
   "devCommand": "next dev",
   "outputDirectory": "build"
 }
