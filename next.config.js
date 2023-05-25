@@ -7,7 +7,7 @@ module.exports = {
       {
         source: "/hub/:path*",
         destination: "https://www.mundoinvest.com.br/:path*",
-        // basePath:  true,
+        basePath:  false,
         // source: "/hub/:path*",
         // destination: "https://www.ewzhub.com/:path*",
         // permanent: false
