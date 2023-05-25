@@ -6,7 +6,8 @@ module.exports = {
     return [
       {
         "source": "/hub/:path*",
-        "destination": "https://www.ewzhub.com/:path*"
+        "destination": "https://www.ewzhub.com/:path*",
+        "basePath":  false
       }
     ]
   }
