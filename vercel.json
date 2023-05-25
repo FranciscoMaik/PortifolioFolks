@@ -5,8 +5,8 @@
   "framework": "nextjs",
   "rewrites": [
     {
-      "source": "/hub/(.*)",
-      "destination": "https://www.ewzhub.com/$1"
+      "source": "/hub/:path*",
+      "destination": "https://www.ewzhub.com/:path*"
     }
   ]
 }
