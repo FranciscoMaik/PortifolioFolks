@@ -6,7 +6,7 @@
   "rewrites": [
     {
       "source": "/hub/(.*)",
-      "destination": "https://www.ewzhub.com/v1/$1"
+      "destination": "https://www.ewzhub.com/$1"
     }
   ]
 }
