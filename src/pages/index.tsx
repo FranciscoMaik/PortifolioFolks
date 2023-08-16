@@ -57,7 +57,7 @@ const Home: React.FC = function () {
                   <CardInformation
                     years={3}
                     title="JavaScript e TypesCript"
-                    skills={['NextJs', 'ReactJs', 'React Native', 'Jest']}
+                    skills={['NextJs', 'ReactJs', 'React Native', 'Tipagens']}
                   />
                   <CardInformation
                     years={1}
