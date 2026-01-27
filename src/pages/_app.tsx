@@ -4,7 +4,6 @@ import { ThemeProvider } from 'styled-components';
 
 import { GlobalStyle } from '../../globalStyle';
 import { Toggle } from '../components/button';
-import { Background3D } from '../components/Background3D';
 import { ThemeContextProvider, ThemeContext } from '../context/ThemeContext';
 
 const AppContent: React.FC<AppProps> = function ({ Component, pageProps }) {
@@ -12,7 +11,6 @@ const AppContent: React.FC<AppProps> = function ({ Component, pageProps }) {
 
   return (
     <ThemeProvider theme={themeItem}>
-      <Background3D />
       <GlobalStyle />
       <Toggle />
       <Component {...pageProps} />
