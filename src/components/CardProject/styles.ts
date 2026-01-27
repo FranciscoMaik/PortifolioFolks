@@ -1,68 +1,106 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  max-width: 350px;
-  max-height: 180px;
-  background-color: ${({ theme }) => theme.backgroundCard};
-  border-radius: 4px;
-  padding: 20px;
+  width: 100%;
+  height: 100%;
+  background: ${({ theme }) => theme.backgroundCard};
+  border: 1px solid ${({ theme }) => theme.secondaryColor}40;
+  border-radius: 16px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
 
-  :hover {
-    transform: scale(1.02);
-    transition: 0.5s;
-    background-color: ${({ theme }) => theme.hover};
-    box-shadow: 0px 5px 50px -8px ${({ theme }) => theme.boxShadowHover};
+  &:hover {
+    transform: translateY(-5px);
+    border-color: ${({ theme }) => theme.fourColor};
+    box-shadow: 0 10px 30px -10px ${({ theme }) => theme.fourColor}40;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      ${({ theme }) => theme.fourColor}10 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 0;
   }
 
   > div {
+    position: relative;
+    z-index: 1;
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    height: 100%;
   }
 
   .summary {
     display: flex;
     flex-direction: column;
-  }
-
-  p {
-    color: ${({ theme }) => theme.thirdColor};
-    text-overflow: ellipsis;
-  }
-
-  .icon {
-    cursor: pointer;
-    margin-top: 8px;
-    width: 100%;
-    display: flex;
-
-    > a {
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 14px;
-
-      > p {
-        color: ${({ theme }) => theme.fourColor};
-      }
-    }
+    flex: 1;
   }
 
   .text {
-    max-height: 85px;
-    display: inline-block;
-    white-space: normal;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    direction: ltr;
+    flex: 1;
+    margin-bottom: 20px;
+
+    p {
+      color: ${({ theme }) => theme.thirdColor};
+      font-size: 0.95rem;
+      line-height: 1.6;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
   }
 
-  @media screen and (max-width: 650px) {
-    max-width: 100%;
+  .icon {
+    margin-top: auto;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: ${({ theme }) => theme.secondaryColor}20;
+      color: ${({ theme }) => theme.colorText};
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: ${({ theme }) => theme.fourColor};
+        color: white;
+      }
+    }
   }
 `;
 
 export const HeaderItem = styled.div`
-  color: ${({ theme }) => theme.secondaryColor};
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+
+  h3 {
+    color: ${({ theme }) => theme.colorText};
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
 `;

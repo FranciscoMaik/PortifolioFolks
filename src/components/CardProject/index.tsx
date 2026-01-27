@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { FiArrowRight } from 'react-icons/fi';
 import { Container, HeaderItem } from './styles';
 
 interface CardProjectProps {
@@ -23,11 +23,12 @@ export const CardProject: React.FC<CardProjectProps> = function ({
           <div className="text">
             <p>{description}</p>
           </div>
-          <div className="icon">
-            <a href={linkProject} target="_blank" rel="noreferrer">
-              <p>Visitar</p>
-            </a>
-          </div>
+        </div>
+        <div className="icon">
+          <a href={linkProject} target="_blank" rel="noreferrer">
+            <span>Visitar Projeto</span>
+            <FiArrowRight />
+          </a>
         </div>
       </div>
     </Container>

@@ -1,6 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
-import { ThemeProvider } from 'styled-components';
-import { ThemeContext } from '../context/ThemeContext';
+import React, { useEffect, useState } from 'react';
 
 import { api } from '../service/api';
 import {
@@ -22,7 +20,6 @@ import {
 import { Container } from '../styles/Home/styleHome';
 
 const Home: React.FC = function () {
-  const { themeItem } = useContext(ThemeContext);
   const [dataRepos, setDataRepos] = useState<IFormatDataStatistic>(
     {} as IFormatDataStatistic
   );
@@ -38,8 +35,7 @@ const Home: React.FC = function () {
   }, []);
 
   return (
-    <ThemeProvider theme={themeItem}>
-      <Container>
+    <Container>
         <div>
           <div className="portfolio">
             <Header />
@@ -123,8 +119,7 @@ const Home: React.FC = function () {
         </div>
 
         <Footer />
-      </Container>
-    </ThemeProvider>
+    </Container>
   );
 };
 
