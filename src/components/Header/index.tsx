@@ -4,17 +4,16 @@ import { Container, Title, Subtitle, Role } from './styles';
 export const Header: React.FC = function () {
   return (
     <Container>
-      <Role>Frontend Developer</Role>
+      <Role>Desenvolvedor Frontend e Mobile | Tech Lead | React, NextJS, React Native, TypeScript</Role>
       <Title>
-        <strong>F. Maik</strong> Fonseca
+        <strong>Francisco Maik</strong> Fonseca Nunes
       </Title>
       <Subtitle>
-        Building <span>digital experiences</span> with modern technologies and
-        creative design.
+        Cajamar, São Paulo, Brasil
       </Subtitle>
       <Role
         as="a"
-        href="mailto:franciscomaikf@gmail.com"
+        href="mailto:chiconunes3081@gmail.com"
         style={{
           cursor: 'pointer',
           background: 'transparent',
@@ -23,7 +22,7 @@ export const Header: React.FC = function () {
           letterSpacing: 'normal',
         }}
       >
-        franciscomaikf@gmail.com
+        chiconunes3081@gmail.com
       </Role>
     </Container>
   );

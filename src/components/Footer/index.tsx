@@ -20,7 +20,7 @@ export const Footer: React.FC = function () {
           <AiFillInstagram size={32} />
         </a>
         <a
-          href="https://api.whatsapp.com/send?phone=5589988020693&text=Ol%C3%A1%2C%20sou%20o%20Francisco%20Maik%2C%20em%20que%20posso%20ajudar%3F"
+          href="https://api.whatsapp.com/send?phone=5511945125609&text=Ol%C3%A1%2C%20sou%20o%20Francisco%20Maik%2C%20em%20que%20posso%20ajudar%3F"
           target="_blank"
           rel="noreferrer"
           aria-label="WhatsApp"
