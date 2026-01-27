@@ -22,7 +22,7 @@ export const Container = styled.div`
   > div {
     padding: 20px;
 
-    &:first-child {
+    &:first-child:not(:only-child) {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -48,14 +48,22 @@ export const Container = styled.div`
     h4 {
       font-weight: 700;
       font-size: 1.1rem;
-      margin-bottom: 8px;
-      color: ${({ theme }) => theme.colorText}; // Using primary text color
+      margin-bottom: 12px;
+      margin-top: 0;
+      color: ${({ theme }) => theme.colorText};
     }
 
     p {
       color: ${({ theme }) => theme.thirdColor};
-      line-height: 1.5;
+      line-height: 1.6;
+      margin: 0;
     }
+  }
+
+  /* Quando não há activeYears, a div de conteúdo precisa de estilos específicos */
+  > div:only-child {
+    padding: 20px;
+    width: 100%;
   }
 
   @media screen and (max-width: 650px) {
