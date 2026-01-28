@@ -1,16 +1,16 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Nav = styled.nav`
   position: absolute;
   top: 2rem;
-  right: 2rem;
+  left: 2rem;
   display: flex;
   gap: 1.5rem;
   z-index: 10;
 
   @media (max-width: 768px) {
     top: 1rem;
-    right: 1rem;
+    left: 1rem;
     font-size: 0.9rem;
   }
 `;

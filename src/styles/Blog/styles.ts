@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const BlogContainer = styled.div`
   display: flex;
@@ -70,5 +70,21 @@ export const PostListItem = styled.li`
   p {
     font-size: 0.9rem;
     color: ${(props) => props.theme.thirdColor};
+  }
+`;
+
+export const HeaderWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 84px;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 24px;
+  }
+
+  > header {
+    max-width: 1200px;
+    width: 100%;
   }
 `;
