@@ -1,6 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
-import { ThemeProvider } from 'styled-components';
-import { ThemeContext } from '../context/ThemeContext';
+import React, { useEffect, useState } from 'react';
 
 import { api } from '../service/api';
 import {
@@ -22,7 +20,6 @@ import {
 import { Container } from '../styles/Home/styleHome';
 
 const Home: React.FC = function () {
-  const { themeItem } = useContext(ThemeContext);
   const [dataRepos, setDataRepos] = useState<IFormatDataStatistic>(
     {} as IFormatDataStatistic
   );
@@ -38,41 +35,59 @@ const Home: React.FC = function () {
   }, []);
 
   return (
-    <ThemeProvider theme={themeItem}>
-      <Container>
+    <Container>
         <div>
           <div className="portfolio">
             <Header />
           </div>
 
-          <h2 className="description">Desenvolvedor web e mobile</h2>
+          <h2 className="description">Desenvolvedor Frontend e Mobile | Tech Lead</h2>
 
           <div className="portfolio">
             <Title name="Sobre" />
             <ContainerHeader />
             <div className="information">
               <div className="skills">
-                <h3>Competências</h3>
+                <h3>Principais competências</h3>
                 <div>
                   <CardInformation
                     years={3}
-                    title="JavaScript e TypesCript"
-                    skills={['NextJs', 'ReactJs', 'React Native', 'Tipagens']}
+                    title="JavaScript e TypeScript"
+                    skills={['NextJs', 'ReactJs', 'React Native', 'TypeScript']}
                   />
                   <CardInformation
-                    years={1}
-                    title="Python"
-                    skills={['Processamento de Imagens e Sons']}
+                    years={0}
+                    activeYears={false}
+                    title="Kotlin"
+                    skills={['Desenvolvimento Mobile Android', 'Estruturas de Controle', 'Funções']}
+                  />
+                  <CardInformation
+                    years={0}
+                    activeYears={false}
+                    title="Experiência do usuário (UX)"
+                    skills={['Design de Interfaces', 'Navegação', 'Armazenamento local']}
+                  />
+                  <CardInformation
+                    years={0}
+                    activeYears={false}
+                    title="HTML5"
+                    skills={['Desenvolvimento Web', 'Interfaces Responsivas']}
                   />
                 </div>
               </div>
               <div className="interests">
-                <h3>Interesses</h3>
+                <h3>Certificações</h3>
                 <CardInformation
                   years={0}
                   activeYears={false}
-                  title="JavaScript e TypesCript"
-                  skills={['UX e UI', 'Backend']}
+                  title="Desenvolvimento"
+                  skills={['Interfaces, Navegação e Armazenamento local', 'Estruturas de Controle de Fluxo e Coleções em Kotlin', 'O poder das Funções em Kotlin']}
+                />
+                <CardInformation
+                  years={0}
+                  activeYears={false}
+                  title="Outras"
+                  skills={['Introdução ao .NET', 'Trabalhando em Equipes Ágeis']}
                 />
               </div>
             </div>
@@ -108,9 +123,7 @@ const Home: React.FC = function () {
                 <CardStatistic
                   numberInfo={dataRepos.languages?.length.toString()}
                   header="Linguagens"
-                  description={`Linguagens utilizadas em projetos como: ${dataRepos.languages
-                    ?.map(item => item)
-                    .join(', ')}`}
+                  description="Linguagens utilizadas em projetos como: JavaScript, TypeScript, Kotlin, HTML5, CSS3, Python e outras tecnologias modernas para desenvolvimento web e mobile."
                 />
               </div>
             </div>
@@ -123,8 +136,7 @@ const Home: React.FC = function () {
         </div>
 
         <Footer />
-      </Container>
-    </ThemeProvider>
+    </Container>
   );
 };
 

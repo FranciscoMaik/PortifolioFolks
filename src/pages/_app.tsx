@@ -1,16 +1,27 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
+import { ThemeProvider } from 'styled-components';
 
 import { GlobalStyle } from '../../globalStyle';
 import { Toggle } from '../components/button';
-import { ThemeContextProvider } from '../context/ThemeContext';
+import { ThemeContextProvider, ThemeContext } from '../context/ThemeContext';
 
-const MyApp: React.FC<AppProps> = function ({ Component, pageProps }) {
+const AppContent: React.FC<AppProps> = function ({ Component, pageProps }) {
+  const { themeItem } = React.useContext(ThemeContext);
+
   return (
-    <ThemeContextProvider>
+    <ThemeProvider theme={themeItem}>
+      <GlobalStyle />
       <Toggle />
       <Component {...pageProps} />
-      <GlobalStyle />
+    </ThemeProvider>
+  );
+};
+
+const MyApp: React.FC<AppProps> = function (props) {
+  return (
+    <ThemeContextProvider>
+      <AppContent {...props} />
     </ThemeContextProvider>
   );
 };

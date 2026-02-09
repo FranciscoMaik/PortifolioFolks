@@ -5,49 +5,82 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding: 84px;
+  padding: 0 84px;
   align-items: center;
+  overflow-x: hidden;
 
-  .projects {
-    .cards {
-      max-width: 1098px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-      margin-block: 24px;
-    }
+  > div {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
-  .statistic {
-    display: flex;
-    margin-top: 24px;
-    margin-bottom: 24px;
-    gap: 24px;
+  .portfolio {
+    width: 100%;
+    margin-bottom: 48px;
   }
 
   .description {
-    font-weight: 100;
-    font-size: 36px;
-    margin-bottom: 24px;
-    color: ${({ theme }) => theme.primaryColor};
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin: 48px 0;
+    color: ${({ theme }) => theme.colorText};
+    line-height: 1.2;
+    text-align: center;
+    background: ${({ theme }) => theme.accentGradient};
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .projects {
+    width: 100%;
+    margin-bottom: 80px;
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      margin-top: 32px;
+    }
   }
 
   .information {
-    display: flex;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    margin-top: 32px;
 
-    > div {
+    @media (min-width: 900px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .skills, .interests {
       display: flex;
-      width: 100%;
       flex-direction: column;
+      gap: 24px;
 
       h3 {
-        color: ${({ theme }) => theme.primaryColor};
+        color: ${({ theme }) => theme.colorText};
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 16px;
       }
     }
   }
 
-  @media screen and (max-width: 650px) {
-    padding: 24px;
+  .statistic {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    margin: 48px 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 24px;
+
+    .description {
+      margin: 32px 0;
+    }
   }
 `;

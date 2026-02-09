@@ -13,6 +13,7 @@ interface ThemeSelected {
   hover: string;
   boxShadowHover: string;
   colorText: string;
+  accentGradient: string;
 }
 
 type ThemeContextType = {

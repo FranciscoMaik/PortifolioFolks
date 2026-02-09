@@ -1,68 +1,71 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  max-width: 350px;
-  max-height: 180px;
-  background-color: ${({ theme }) => theme.backgroundCard};
-  border-radius: 4px;
-  padding: 20px;
+  background: ${({ theme }) => theme.backgroundCard};
+  border: 1px solid ${({ theme }) => theme.secondaryColor}40;
+  border-radius: 16px;
+  padding: 24px;
   display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 
-  :hover {
-    transform: scale(1.02);
-    transition: 0.5s;
-    background-color: ${({ theme }) => theme.hover};
-    box-shadow: 0px 5px 50px -8px ${({ theme }) => theme.boxShadowHover};
+  &:hover {
+    transform: translateY(-5px);
+    border-color: ${({ theme }) => theme.fourColor};
+    box-shadow: 0 10px 30px -10px ${({ theme }) => theme.fourColor}40;
   }
 
   .staticInfo {
     display: flex;
-    margin-right: 24px;
+    align-items: baseline;
+    gap: 4px;
 
     span {
-      font-size: 35px;
+      font-size: 2rem;
       font-weight: 300;
-      color: ${({ theme }) => theme.secondaryColor};
+      color: ${({ theme }) => theme.fourColor};
     }
 
     h2 {
-      font-size: 72px;
-      font-weight: 300;
-      color: ${({ theme }) => theme.secondaryColor};
-      margin-left: -24px;
+      font-size: 3.5rem;
+      font-weight: 700;
+      background: ${({ theme }) => theme.accentGradient};
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1;
     }
   }
 
-  > div {
+  > div:last-child {
     display: flex;
-    gap: 24px;
+    flex-direction: column;
   }
 
   .summary {
     display: flex;
     flex-direction: column;
-  }
-
-  p {
-    color: ${({ theme }) => theme.thirdColor};
-    text-overflow: ellipsis;
+    gap: 8px;
   }
 
   .text {
-    max-height: 85px;
-    display: inline-block;
-    white-space: normal;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    direction: ltr;
+    p {
+      color: ${({ theme }) => theme.thirdColor};
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
   }
 
   @media screen and (max-width: 650px) {
-    max-width: 100%;
+    width: 100%;
   }
 `;
 
 export const HeaderItem = styled.div`
-  color: ${({ theme }) => theme.secondaryColor};
-  margin-bottom: 8px;
+  h3 {
+    color: ${({ theme }) => theme.colorText};
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
 `;
